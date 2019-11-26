@@ -1,10 +1,15 @@
+import os
+import argparse
 import difflib
 from collections import defaultdict
 from typing import List
 
+OUTPUT_PATH = "tableau.html"
 
 def generate(file):
-    lines: List[str] = [line for line in file]
+    lines: List[str]
+    with open(file) as f:
+        lines = [line for line in f]
     html = ["<table>", "</table>"]
     tableau_format = ""
     for i,j in enumerate(difflib.ndiff(lines[0], "\\begin{tableau}{}")):
@@ -41,3 +46,24 @@ def get_content_from_braces(string: str):
     brace1 = string.index('{')
     brace2 = string.index('}')
     return string[brace1+1:brace2]
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--generate', action='store')
+    args = parser.parse_args()
+
+    path: str
+    output: str
+    if args.generate:
+        path = args.generate
+        if os.path.isfile(path):
+            if os.path.exists(OUTPUT_PATH):
+                print("Warning: this will overwrite an existing file. ENTER to continue or SIGINT to cancel.")
+                input()
+            with open(OUTPUT_PATH, "w") as out:
+                out.write(generate(path))
+        else:
+            print("Not a file!")
+    else:
+        print("Please run with --generate /path/to/file")
