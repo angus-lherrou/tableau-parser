@@ -29,9 +29,16 @@
                 text-align          : left;
             }
             .indicator {
+                border              : none;
                 text-align          : right;
+                height              : 2px;
+                width               : 2px;
+                display             : block;
+                vertical-align      : middle;
+                horizontal-align    : right;
             }
-            .indicator, .candidate {
+            .candidate {
+                border-top          : 1px solid black;
                 border-bottom       : 1px solid black;
             }
             .noshow {
@@ -58,14 +65,14 @@
                                 </tr>
                             </thead>
                             <tbody class="noshow">
-                                <tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                     </td>
                                     <td class="candidate">
                                         stap
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                         ☞
                                     </td>
@@ -73,7 +80,7 @@
                                         sap
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                     </td>
                                     <td class="candidate">
@@ -105,14 +112,16 @@
                     <td class="outer">
                         <table class="cand">
                             <tbody>
-                                <tr>
+                                <tr class="noshow">
+                                </tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                     </td>
                                     <td class="candidate">
                                         stap
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                         ☞
                                     </td>
@@ -120,7 +129,7 @@
                                         sap
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr class="candidate">
                                     <td class="indicator">
                                     </td>
                                     <td class="candidate">

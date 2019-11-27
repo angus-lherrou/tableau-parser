@@ -1,6 +1,6 @@
 """
 tableau-parser
-    v. 0.1.0
+    v. 0.1.1
 
 Author: Angus L'Herrou
 Date: 2019-11-26
@@ -41,9 +41,16 @@ CSS = """
         text-align: left;
     }
     .indicator {
+        border: none;
         text-align: right;
+        height: 2px;
+        width: 2px;
+        display:block;
+        vertical-align: middle;
+        horizontal-align: right;
     }
-    .indicator, .candidate {
+    .candidate {
+        border-top: 1px solid black;
         border-bottom: 1px solid black;
     }
     .noshow {
@@ -93,7 +100,7 @@ def generate(file):
 
     candidate_column = ""
     for candidate in candidates:
-        candidate_column += "<tr>"
+        candidate_column += "<tr class='candidate'>"
         candidate_column += "<td class='indicator'>"
         if candidate[0]:
             to_insert = CHAR_DICT[candidate[0]] if CHAR_DICT[candidate[0]] else "ERR"
@@ -115,7 +122,7 @@ def generate(file):
     html.insert(-1, constraint_row)
     html.insert(-1, "</tr></table></td></tr>")
 
-    html.insert(-1, "<tr><td class='outer'><table class='cand'>" + candidate_column)
+    html.insert(-1, "<tr><td class='outer'><table class='cand'>" + "<tr class='noshow'></tr>" + candidate_column)
     html.insert(-1, "</table></td>")
     html.insert(-1, "<td class='outer'><table class='viol'><tr class='noshow'>")
     html.insert(-1, constraint_row)
