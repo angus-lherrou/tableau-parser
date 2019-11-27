@@ -8,6 +8,7 @@ This tool is being written as a part of [otbank](https://github.com/angus-lherro
 * Now supports the hand! (started to implement optional arguments in `\cand{}`)
 * Outputs a whole HTML page; copy and paste the CSS and the outermost <table> into another html file to use the generated table elsewhere.
 * Added CSS table formatting to match (roughly) ot-tableau formatting
+
 ## To-do
 * Support for nested commands
 * Support for tipa maybe?
