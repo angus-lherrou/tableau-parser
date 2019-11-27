@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table, th, tr, td.outer {
+                border-collapse     : collapse;
+                padding             : 0;
+            }
+            table {
+                border              : 1px solid black;
+            }
+            th, td {
+                border-collapse     : collapse;
+                padding             : 2px 10px;
+            }
+            table.outer {
+                border              : none;
+                border-collapse     : separate;
+                padding             : 0;
+            }
+            .constraint, .vio {
+                text-align          : center;
+                border-bottom       : 1px solid black;
+                border-right        : 1px solid black;
+                border-left         : none;
+            }
+            .input, .candidate {
+                text-align          : left;
+            }
+            .indicator {
+                text-align          : right;
+            }
+            .indicator, .candidate {
+                border-bottom       : 1px solid black;
+            }
+            .noshow {
+                visibility          : collapse;
+            }
+            .unranked {
+                border-right        : 1px dashed black;
+            }
+        </style>
+        <title>
+        </title>
+    </head>
+    <body>
+        <table class="outer">
+            <tbody>
+                <tr>
+                    <td class="outer">
+                        <table class="in">
+                            <thead>
+                                <tr>
+                                    <th class="input" colspan="2">
+                                        stap
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="noshow">
+                                <tr>
+                                    <td class="indicator">
+                                    </td>
+                                    <td class="candidate">
+                                        stap
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="indicator">
+                                        ☞
+                                    </td>
+                                    <td class="candidate">
+                                        sap
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="indicator">
+                                    </td>
+                                    <td class="candidate">
+                                        tap
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="outer">
+                        <table class="const">
+                            <tbody>
+                                <tr>
+                                    <th class="constraint unranked">
+                                        *Complex
+                                    </th>
+                                    <th class="constraint">
+                                        Anchor-IO
+                                    </th>
+                                    <th class="constraint">
+                                        Contiguity-IO
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="outer">
+                        <table class="cand">
+                            <tbody>
+                                <tr>
+                                    <td class="indicator">
+                                    </td>
+                                    <td class="candidate">
+                                        stap
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="indicator">
+                                        ☞
+                                    </td>
+                                    <td class="candidate">
+                                        sap
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="indicator">
+                                    </td>
+                                    <td class="candidate">
+                                        tap
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="outer">
+                        <table class="viol">
+                            <tbody>
+                                <tr class="noshow">
+                                    <th class="constraint unranked">
+                                        *Complex
+                                    </th>
+                                    <th class="constraint">
+                                        Anchor-IO
+                                    </th>
+                                    <th class="constraint">
+                                        Contiguity-IO
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="vio unranked">
+                                        *!
+                                    </td>
+                                    <td class="vio">
+                                    </td>
+                                    <td class="vio">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="vio unranked">
+                                    </td>
+                                    <td class="vio">
+                                    </td>
+                                    <td class="vio">
+                                        *
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="vio unranked">
+                                    </td>
+                                    <td class="vio">
+                                        *!
+                                    </td>
+                                    <td class="vio">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
