@@ -1,6 +1,6 @@
 """
 tableau-parser
-    v. 0.1.1
+    v. 0.1.2
 
 Author: Angus L'Herrou
 Date: 2019-11-26

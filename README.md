@@ -1,10 +1,11 @@
 # tableau-parser
-v. 0.1.1
+v. 0.1.2
 ## About
 **tableau-parser** is a tool to convert ot-tableau tableaux into HTML tables for use on the web.
 
 This tool is being written as a part of [otbank](https://github.com/angus-lherrou/otbank).
 ## Recent changes
+ * Dependency updates
  * Some browser compatibility fixes
  * Now supports the hand! (started to implement optional arguments in `\cand{}`)
  * Outputs a whole HTML page; copy and paste the CSS and the outermost `<table>` into another html file to use the generated table elsewhere.
